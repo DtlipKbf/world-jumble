@@ -5,7 +5,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
 	enum { WORD, HINT, NUM_FIELD };
-	const int NUM_WORDS = 10;
+	const int NUM_WORDS = 12;
 	const string WORDS[NUM_WORDS][NUM_FIELD] =
 	{
 		{"миндовг"," первый кн€зь вкл"},
@@ -17,7 +17,9 @@ int main() {
 		{"велика€_война", "событие 1409 - 1411"},
 		{"песн€ры", "ансамбль под управлением владимира мул€вина"},
 		{"горбачев", "его политикой стала перестройка"},
-		{"лук€нович", "спас немецкую девочку,но сам при этом погиб"}
+		{"лук€нович", "спас немецкую девочку,но сам при этом погиб"},
+		{"курловский_расстрел","событие 18.10.1905"},
+		{"кровавое_воскресенье","событие 09.01.1905"}
 	};
 
 	cout << "\t\tЁто игра";
@@ -36,7 +38,7 @@ int main() {
 	
 	while (b != "нет") {
 		int i = rand() % NUM_WORDS;
-		string word = WORDS[6][WORD];
+		string word = WORDS[i][WORD];
 		string hint = WORDS[i][HINT];
 
 		string jumble = word;
